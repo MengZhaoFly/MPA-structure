@@ -8,3 +8,4 @@
 //     router.get('/books/list', booksController.actionList);
 //     router.get('/books/create', booksController.actionCreate);
 // }
+"use strict";

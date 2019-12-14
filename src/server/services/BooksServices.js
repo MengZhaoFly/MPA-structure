@@ -19,8 +19,9 @@ class Books {
      * getData(options)
      */
     getData(options) {
-        const safeRequest = new SafeRequest(options.url);
-        return safeRequest.fetch();
+        // const safeRequest = new SafeRequest(options.url);
+        // return safeRequest.fetch();
+        return Promise.resolve({data: ['1', '2']})
     }
 }
 export default Books;

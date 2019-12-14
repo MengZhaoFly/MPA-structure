@@ -11,9 +11,7 @@ console.log('gulp 编译环境：', process.env.NODE_ENV)
 function serverDev() {
   return watch(entrys, { ignoreInitial: false })
     .pipe(
-      babel({
-        plugins: ['@babel/plugin-transform-modules-commonjs']
-      })
+      babel()
     )
     .pipe(dest('dist'))
 }
@@ -21,9 +19,7 @@ function serverDev() {
 function serverProd() {
   return src(entrys)
     .pipe(
-      babel({
-        plugins: ['@babel/plugin-transform-modules-commonjs']
-      })
+      babel()
     )
     .pipe(dest('dist'))
 }
@@ -31,9 +27,7 @@ function serverProd() {
 function cleanConfig() {
   return src(entrys)
     .pipe(
-      babel({
-        plugins: ['@babel/plugin-transform-modules-commonjs']
-      })
+      babel()
     )
     .pipe(
       rollup({

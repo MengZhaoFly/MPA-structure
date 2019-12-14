@@ -5,11 +5,11 @@ const errorHandler = {
                 await next();
             } catch (error) {
                 //如果node挂了 及时的查错
+                console.log(error);
                 logger.error(error);
                 ctx.status = error.status || 500;
-                ctx.body = "错误";
+                ctx.body = error;
             }
-            console.log('error')
             switch (ctx.status) {
                 case 404:
                     break;

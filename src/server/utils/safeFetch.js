@@ -1,5 +1,5 @@
 import config from "../config";
-import fetch from "node-fetch";
+import nodeFetch from "node-fetch";
 class SafeRequest {
     constructor(url) {
         this.url = url;
@@ -9,10 +9,10 @@ class SafeRequest {
         let result = {
             code: 0,
             message: "",
-            data: []
+            data: ['d1', 'd2', 'd3']
         }
         return new Promise((resolve, reject) => {
-            let fetch = fetch(this.baseUrl + this.url);
+            let fetch = nodeFetch(this.baseUrl + this.url);
             console.log("🍊🍊🍊🍊🍊",this.baseUrl + this.url);
             fetch.then(res => res.json())
                 .then((json) => {

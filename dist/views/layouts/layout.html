@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>{% block title %}{% endblock %}</title>
+
+    {% block head %} {% endblock %}
+
+    {% block styles %} {% endblock %}
+  </head>
+  <body>
+
+    <!-- <script src="juery"> -->
+    {% include '../../components/banner/banner.html' %} {% block content %}{%
+    endblock %} {% block scripts %}{% endblock %}
+  </body>
+</html>
